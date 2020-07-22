@@ -1,4 +1,4 @@
-package com.java.algorithm;
+package com.algorithm;
 
 public class MergeSort {
 	void merge(int arr[], int beg, int mid, int end) {

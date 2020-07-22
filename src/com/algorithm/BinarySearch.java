@@ -1,4 +1,4 @@
-package com.java.algorithm;
+package com.algorithm;
 
 public class BinarySearch {
 	// Java implementation of recursive Binary Search

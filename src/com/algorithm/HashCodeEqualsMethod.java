@@ -1,4 +1,4 @@
-package com.java.algorithm;
+package com.algorithm;
 
 public class HashCodeEqualsMethod {
 
@@ -7,13 +7,12 @@ public class HashCodeEqualsMethod {
 		Emp e2 = new Emp(2);
 		System.out.println(e1.hashCode());
 		System.out.println(e2.hashCode());
-		
+
 		Integer i1 = new Integer(1);
 		Integer i2 = new Integer(1);
 		System.out.println(i1.hashCode());
 		System.out.println(i2.hashCode());
-		
-		
+
 	}
 
 }
