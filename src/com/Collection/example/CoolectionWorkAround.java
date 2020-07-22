@@ -1,4 +1,4 @@
-package com.collection.example;
+package com.Collection.example;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -12,10 +12,8 @@ public class CoolectionWorkAround {
 		List l = new ArrayList();
 		l.add(1);
 		Collections.sort(l);
-		
+
 		Map mp = new HashMap();
-		
-		
 
 	}
 

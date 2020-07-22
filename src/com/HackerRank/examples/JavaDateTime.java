@@ -1,4 +1,4 @@
-package com.hackerRank.examples;
+package com.HackerRank.examples;
 
 import java.time.LocalDate;
 import java.util.Scanner;
@@ -18,12 +18,12 @@ public class JavaDateTime {
 //
 //	}
 	public static String getDay1(String day, String month, String year) {
-		
+
 		LocalDate date = LocalDate.of(Integer.parseInt(year), Integer.parseInt(month), Integer.parseInt(day));
-	      System.out.println("date3: " + date.getDayOfWeek().toString());
+		System.out.println("date3: " + date.getDayOfWeek().toString());
 
 		return date.getDayOfWeek().toString();
-		
+
 	}
 
 	public static void main(String[] args) {

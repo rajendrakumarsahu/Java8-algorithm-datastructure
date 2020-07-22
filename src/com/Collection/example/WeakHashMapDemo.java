@@ -1,6 +1,5 @@
-package com.collection.example;
+package com.Collection.example;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.WeakHashMap;
 
@@ -13,10 +12,10 @@ public class WeakHashMapDemo {
 	public static void main(String[] args) throws InterruptedException {
 		Map m = new WeakHashMap();
 		Temp t = new Temp();
-		//m.put("a", t);
-		m.put(t,"Ashok");
+		// m.put("a", t);
+		m.put(t, "Ashok");
 		System.out.println(m);
-		t=null;
+		t = null;
 		System.gc();
 		Thread.sleep(2000);
 		System.out.println(m);
@@ -24,11 +23,13 @@ public class WeakHashMapDemo {
 	}
 
 }
-class Temp{
+
+class Temp {
 	@Override
 	public String toString() {
 		return "temp";
 	}
+
 	@Override
 	protected void finalize() throws Throwable {
 		System.out.println("Finalize method called:::");

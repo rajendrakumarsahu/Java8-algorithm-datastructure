@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.collection.example;
+package com.Collection.example;
 
 /**
  * @author Lohitansh
@@ -9,8 +9,8 @@ package com.collection.example;
  */
 public class Addition {
 
-	public  int sum(int a,int b) {
-		int c = a+b;
+	public int sum(int a, int b) {
+		int c = a + b;
 		return c;
 	}
 }

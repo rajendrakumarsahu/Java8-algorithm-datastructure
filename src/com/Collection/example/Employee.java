@@ -1,4 +1,4 @@
-package com.collection.example;
+package com.Collection.example;
 
 public class Employee implements Comparable {
 	String name;

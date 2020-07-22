@@ -1,4 +1,4 @@
-package com.collection.example;
+package com.Collection.example;
 
 import java.util.Comparator;
 import java.util.TreeSet;
@@ -6,7 +6,7 @@ import java.util.TreeSet;
 public class TreeSetDemoWithComparetor {
 
 	public static void main(String[] args) {
-		TreeSet t=new TreeSet(new MyComparator());
+		TreeSet t = new TreeSet(new MyComparator());
 		t.add(10);
 		t.add(0);
 		t.add(15);
@@ -16,7 +16,7 @@ public class TreeSetDemoWithComparetor {
 
 }
 
-class MyComparator implements Comparator<Object>{
+class MyComparator implements Comparator<Object> {
 	public int compare(Object obj1, Object obj2) {
 		Integer i1 = (Integer) obj1;
 		Integer i2 = (Integer) obj2;
