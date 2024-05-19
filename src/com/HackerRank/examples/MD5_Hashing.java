@@ -3,8 +3,6 @@ package com.HackerRank.examples;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-import javax.xml.bind.DatatypeConverter;
-
 public class MD5_Hashing {
 
 	public static void main(String[] args) {
@@ -14,7 +12,7 @@ public class MD5_Hashing {
 			MessageDigest md = MessageDigest.getInstance("SHA-256");
 			md.update(password.getBytes());
 			byte[] digest = md.digest();
-			String myHash = DatatypeConverter.printHexBinary(digest).toLowerCase();
+			String myHash = "";// DatatypeConverter.printHexBinary(digest).toLowerCase();
 			System.out.println(myHash);
 
 			System.out.println(myHash.equals(hash));

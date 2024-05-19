@@ -8,7 +8,7 @@ public class PatternTest {
 	public static void main(String[] args) {
 		Pattern p = Pattern
 				.compile("[a-zA-Z0-9]+[._a-zA-Z0-9!#$%&'*+-/=?^_`{|}~]*[a-zA-Z]*@[a-zA-Z0-9]{2,8}.[a-zA-Z.]{2,6}");
-		Matcher m = p.matcher("a@b");
+		Matcher m = p.matcher("rajendra");
 
 		if (m.find())
 			System.out.println("Correct!");

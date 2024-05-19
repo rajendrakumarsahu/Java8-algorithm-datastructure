@@ -9,6 +9,7 @@ public class Java8DateTime {
 		System.out.println("the current date is " + date.getYear());
 		System.out.println("the current date is " + date.getMonth());
 		System.out.println("the current date is " + date.getMonthValue());
+		System.out.println("the current date is " + date.now());
 	}
 
 }
