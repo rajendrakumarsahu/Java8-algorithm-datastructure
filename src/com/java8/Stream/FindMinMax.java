@@ -41,18 +41,18 @@ public class FindMinMax {
 
 		List<Employee> employees = new ArrayList<Employee>();
 
-		employees.add(new Employee(1, "Lokesh", 36));
-		employees.add(new Employee(2, "Alex", 46));
-		employees.add(new Employee(3, "Brian", 52));
-
-		Comparator<Employee> comparator = Comparator.comparing(Employee::getAge);
-
-		// Get Min or Max Object
-		Employee minObject = employees.stream().min(comparator).get();
-		Employee maxObject = employees.stream().max(comparator).get();
-
-		System.out.println("minObject = " + minObject);
-		System.out.println("maxObject = " + maxObject);
+//		employees.add(new Employee(1, "Lokesh", 36));
+//		employees.add(new Employee(2, "Alex", 46));
+//		employees.add(new Employee(3, "Brian", 52));
+//
+//		Comparator<Employee> comparator = Comparator.comparing(Employee::getAge);
+//
+//		// Get Min or Max Object
+//		Employee minObject = employees.stream().min(comparator).get();
+//		Employee maxObject = employees.stream().max(comparator).get();
+//
+//		System.out.println("minObject = " + minObject);
+//		System.out.println("maxObject = " + maxObject);
 
 	}
 

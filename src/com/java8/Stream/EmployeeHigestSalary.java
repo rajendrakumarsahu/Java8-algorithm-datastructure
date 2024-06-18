@@ -1,9 +1,12 @@
 package com.java8.Stream;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.OptionalInt;
+import java.util.function.BinaryOperator;
 import java.util.stream.Collectors;
 
 public class EmployeeHigestSalary {
@@ -20,6 +23,9 @@ public class EmployeeHigestSalary {
 		empList.add(new Employee1(7, "uvw", 26, 130, "F", "IT", "Pune", 2016));
 		empList.add(new Employee1(8, "pqr", 23, 145, "M", "IT", "Trivandam", 2015));
 		empList.add(new Employee1(9, "stv", 25, 160, "M", "IT", "Blore", 2010));
+
+		// List<Employee1> emplist1 =
+		// empList.stream().collect(Collectors.groupingBy(Employee1::getDeptName,Collectors.counting()))
 
 		// Group the Employees by city.
 		Map<String, List<Employee1>> empByCity;
@@ -63,6 +69,20 @@ public class EmployeeHigestSalary {
 		for (Map.Entry<String, Long> entry : countByDept.entrySet()) {
 			System.out.println(entry.getKey() + " : " + entry.getValue());
 		}
+
+		// Department wise higest salary
+		Comparator<Employee1> bySalary = Comparator.comparing(Employee1::getSalary);
+
+		Map<String, Optional<Employee1>> collect = empList.stream().collect(
+				Collectors.groupingBy(Employee1::getDeptName, Collectors.reducing(BinaryOperator.maxBy(bySalary))));
+		collect.entrySet().stream().forEach(System.out::println);
+		// approch 2
+		Map<String, Optional<Employee1>> map = empList.stream().collect(Collectors.groupingBy(Employee1::getDeptName,
+				Collectors.maxBy(Comparator.comparing(Employee1::getSalary))));
+
+		Map<String, Employee1> stringEmployeeMap = empList.stream()
+				.collect(Collectors.groupingBy(Employee1::getDeptName, Collectors.collectingAndThen(
+						Collectors.maxBy(Comparator.comparingDouble(Employee1::getSalary)), Optional::get)));
 
 	}
 

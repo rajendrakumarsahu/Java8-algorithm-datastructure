@@ -1,5 +1,6 @@
 package com.Collection.example;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ListJava9 {
@@ -12,6 +13,9 @@ public class ListJava9 {
 		System.out.println(values);
 		var ab = "Rajendra";
 		System.out.println(ab);
+
+		var obj = new ArrayList<String>();
+		obj.add("hhhhh");
 
 	}
 

@@ -3,13 +3,17 @@ package com.java8.Stream;
 public class Employee {
 	private int id;
 	private String name;
-	private int age;
+	private String grade;
+	private double salary;
 
-	public Employee(int id, String name, int age) {
-		super();
+	public Employee() {
+	}
+
+	public Employee(int id, String name, String grade, double salary) {
 		this.id = id;
 		this.name = name;
-		this.age = age;
+		this.grade = grade;
+		this.salary = salary;
 	}
 
 	public int getId() {
@@ -28,18 +32,19 @@ public class Employee {
 		this.name = name;
 	}
 
-	public int getAge() {
-		return age;
+	public String getGrade() {
+		return grade;
 	}
 
-	public void setAge(int age) {
-		this.age = age;
+	public void setGrade(String grade) {
+		this.grade = grade;
 	}
 
-	@Override
-	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + ", age=" + age + ", getId()=" + getId() + ", getName()="
-				+ getName() + ", getAge()=" + getAge() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
-				+ ", toString()=" + super.toString() + "]";
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
 	}
 }

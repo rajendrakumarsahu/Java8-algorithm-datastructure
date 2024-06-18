@@ -1,4 +1,4 @@
-package com.ThreadPool.examples;
+package com.executorframework.ThreadPool.examples;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;

@@ -1,4 +1,4 @@
-package com.ThreadPool.examples;
+package com.executorframework.ThreadPool.examples;
 
 public class WorkerThread implements Runnable {
 
