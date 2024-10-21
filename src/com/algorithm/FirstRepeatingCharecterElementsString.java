@@ -32,8 +32,8 @@ public class FirstRepeatingCharecterElementsString {
 		duplicates.forEach((key, value) -> System.out.println(key + " -> " + value));
 
 		Optional<String> result = names.stream()
-				.collect(Collectors.groupingBy(Function.identity(), Collectors.counting())).entrySet().stream()
-				.filter(x -> x.getValue() > 1).map(x -> x.getKey()).findFirst();
+				.collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()))
+				.entrySet().stream().filter(x -> x.getValue() > 1).map(x -> x.getKey()).findFirst();
 
 		// Optional<Employee> employee = list.stream().sorted((x,y) ->
 		// y.salary.compareTo(x.salary)).skip(1).findFirst();

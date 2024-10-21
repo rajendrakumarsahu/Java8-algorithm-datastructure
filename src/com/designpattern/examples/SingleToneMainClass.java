@@ -17,3 +17,7 @@ public class SingleToneMainClass {
 	}
 
 }
+
+ExecutorService executorService = Executors.newFixedThreadPool(10);
+executorService.submit(new Thread(() -> System.out.println(SingleTon.getInstance().hashCode())));
+executorService.submit(new Thread(() -> System.out.println(SingleTon.getInstance().hashCode())));

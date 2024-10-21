@@ -1,13 +1,17 @@
 package com.string.example;
 
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class NonRepeatedCharacterFinder {
 
 	public static void main(String[] args) {
-		String text = "Java Guides";
-		char result = firstNonRepeatedCharacter(text);
+		String text = "ava spring microservice";
+		char result = firstNonRepeatedCharacter1(text);
 		if (result != '\0') {
 			System.out.println("The first non-repeated character is: " + result);
 		} else {
@@ -30,6 +34,16 @@ public class NonRepeatedCharacterFinder {
 			}
 		}
 
+		return '\0'; // return null character if all characters are repeated
+	}
+
+	public static char firstNonRepeatedCharacter1(String input) {
+
+		input.chars().collect(Collectors.groupingBy(Function.identity(),
+				LinkedHashMap::new,
+				Collectors.counting())).
+
+		
 		return '\0'; // return null character if all characters are repeated
 	}
 }
